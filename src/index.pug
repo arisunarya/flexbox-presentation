@@ -1,0 +1,54 @@
+doctype
+html(lang="en")
+	head
+		meta(charset="utf-8")
+		meta(name="viewport" content="width=1024")
+		meta(name="apple-mobile-web-app-capable" content="yes")
+
+		title Flexbox Presentation by Ari Sunarya
+		meta(name="description" content="Flexbox presentation")
+		meta(name="author" content="Ari Sunarya")
+
+		link(rel="stylesheet" href="css/normalize.css")
+		link(rel="stylesheet" href="css/main.css")
+	
+	body(class="impress-not-supported")
+		.fallback-message
+			p
+				| Your browser 
+				b doesn't support the features required 
+				| by impress.js, so you are presented with a simplified version of this presentation. 
+			p 
+				| For the best experience please use the latest  
+				b Chrome, 
+				b Safari 
+				| or 
+				b Firefox browser. 
+		
+		#impress
+			.step(
+				id="wellcome"
+				data-x='0'
+				data-y='-1500'
+				)
+				p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et sequi reiciendis tenetur, ex mollitia dolorum harum. Dolores in possimus natus, aperiam et adipisci excepturi. Ipsam, tenetur voluptate qui. Unde, delectus?
+			
+			.step(
+				id="introduction"
+				data-x='1000'
+				data-y='-1500'
+				data-scale="4"
+				data-rotate="45"
+				data-rotate-x="20"
+				data-rotate-y="12"
+				data-z="1000"
+				)
+				q
+					| Don’t you think that presentations given 
+					strong in modern browsers
+					|  shouldn’t 
+					strong copy the limits
+					|  of ‘classic’ slide decks?
+					
+		script(src="js/impress.js")
+		script(src="js/main.js")

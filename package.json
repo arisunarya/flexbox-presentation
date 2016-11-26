@@ -1,0 +1,37 @@
+{
+  "name": "flexbox-presentation",
+  "version": "1.0.0",
+  "homepage": "https://github.com/arisunarya/flexbox-presentation#readme",
+  "author": "Ari Sunarya",
+  "description": "a flexbox presentation using impress.js",
+  "main": "index.html",
+  "license": "MIT",
+  "keywords": [
+    "flexbox",
+    "presentation",
+    "impress.js",
+    "layout",
+    "grid",
+    "css",
+    "web"
+  ],
+  "scripts": {
+    "start": "grunt && grunt serve"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/arisunarya/flexbox-presentation.git"
+  },
+  "bugs": {
+    "url": "https://github.com/arisunarya/flexbox-presentation/issues"
+  },
+  "devDependencies": {
+    "grunt": "^1.0.1",
+    "grunt-autoprefixer": "^3.0.4",
+    "grunt-contrib-connect": "^1.0.2",
+    "grunt-contrib-cssmin": "^1.0.2",
+    "grunt-contrib-pug": "^1.0.0",
+    "grunt-contrib-watch": "^1.0.0",
+    "grunt-sass": "^1.2.1"
+  }
+}
