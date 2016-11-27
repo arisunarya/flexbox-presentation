@@ -79,7 +79,7 @@ html(lang="en")
 						code
 							| .container {
 							|   display: flex;
-							|   flex-direction: row < default
+							|   flex-direction: row
 							| }
 					.display-flexbox
 						.flex-container
@@ -103,7 +103,6 @@ html(lang="en")
 						.flex-container(style="flex-direction: column")
 							.flex-item
 							.flex-item
-							.flex-item
 			
 			.step(
 				id="flex-direction-column-reverse"
@@ -114,7 +113,6 @@ html(lang="en")
 				.display
 					.display-flexbox
 						.flex-container(style="flex-direction: column-reverse")
-							.flex-item
 							.flex-item
 							.flex-item
 					pre.display-syntax
@@ -136,8 +134,8 @@ html(lang="en")
 						code
 							| .container {
 							|   display: flex;
-							|   flex-direction: row < default
-							|   flex-wrap: nowrap < default
+							|   flex-direction: row
+							|   flex-wrap: nowrap
 							| }
 					.display-flexbox
 						.flex-container
@@ -160,7 +158,7 @@ html(lang="en")
 						code
 							| .container {
 							|   display: flex;
-							|   flex-direction: row < default
+							|   flex-direction: row
 							|   flex-wrap: <b>wrap</b>;
 							| }
 					.display-flexbox
@@ -183,7 +181,7 @@ html(lang="en")
 						code
 							| .container {
 							|   display: flex;
-							|   flex-direction: row < default
+							|   flex-direction: row
 							|   flex-wrap: <b>wrap-reverse</b>;
 							| }
 					.display-flexbox
@@ -207,11 +205,10 @@ html(lang="en")
 						code
 							| .container {
 							|   display: flex;
-							|   flex-flow: <b>column-reverse wrap-reverse</b>;
+							|   flex-flow: <b>column wrap</b>;
 							| }
 					.display-flexbox
-						.flex-container(style="flex-flow: column-reverse wrap-reverse")
-							.flex-item
+						.flex-container(style="flex-flow: column wrap")
 							.flex-item
 							.flex-item
 							.flex-item
@@ -231,7 +228,7 @@ html(lang="en")
 							| .container {
 							|   display: flex;
 							|   flex-wrap: wrap;
-							|   justify-content: flex-start < default
+							|   justify-content: flex-start
 							| }
 					.display-flexbox
 						.flex-container(style="justify-content: flex-start; flex-wrap:wrap")
