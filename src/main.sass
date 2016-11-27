@@ -1,3 +1,171 @@
+// @import "sass/flexbox"
+
+*,
+*::before
+*::after
+	box-sizing: border-box
+
+body
+	font-family: "NexaRegular"
+
 .impress-supported
 	.fallback-message
 		display: none
+
+.step
+	width: 900px
+	opacity: 0.2
+	transition: all 300ms ease
+
+	&.boxed
+		height: 600px
+		// background: #aaa;
+		
+	&.active
+		opacity: 1
+
+.header
+	margin: 20px 40px 30px;
+
+.header-property
+	position: relative
+	font-size: 45px
+	padding: 0 10px 10px
+	border-bottom: 1px solid #000
+	margin-bottom: 15px
+	font-family: "NexaHeavy"
+
+	&:before,
+	&:after
+		content: ""
+		position: absolute
+		width: 1px
+		height: 10px
+		background: #000
+
+	&:before,
+		left: 0
+		bottom: 0
+
+	&:after
+		right: 0
+		top: 100%
+
+.header-values:before
+	content: "values :"
+	vertical-align: middle
+	font-size: 16px
+	margin-right: 10px
+	padding-left: 0 !important
+	padding-right: 0 !important
+
+.header-values:before,
+.header-value
+	display: inline-block
+	padding: 5px 15px
+	
+.header-value
+	margin: 0 5px
+	color: #fff
+	background: #000
+	border-radius: 15px
+	font-family: "Courier"
+	font-size: 15px
+
+.display
+	padding: 0 40px
+	display: flex
+	justify-content: space-between
+
+.display-syntax,
+.display-flexbox
+	&:before
+		font-family: "NexaRegular"
+		font-size: 24px
+		display: block;
+		padding-bottom: 15px
+
+.display-syntax
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	margin: 0
+
+	code
+		font-size: 15px
+		font-family: "Courier"
+
+	&:before
+		content: "syntax :"
+	
+.display-flexbox
+	position: relative
+
+	&:before
+		content: "container"
+		text-align: center;
+
+	&:after
+		content: ""
+		position: absolute
+		top: 34px
+		left: 50%
+		width: 1px
+		height: 10px
+		background: #000
+
+.flex-container
+	display: flex
+	border: 1px solid #000
+	padding: 12px
+	// border-radius: 10px
+	width: 400px
+	height: 348px
+
+.flex-item
+	position: relative
+	padding: 15px
+	margin: 12px
+	border: 1px solid #000
+	// border-radius: 5px
+	background: #FFFAF4
+	display: flex
+	justify-content: center
+	align-items: center
+
+	&:before
+		content: "items"
+		position: absolute
+		top: 10px
+		left: 0;
+		right: 0;
+		text-align: center;
+		font-size: 14px
+
+	&:after
+		display: block
+		width: 40px
+		height: 40px
+		font-size: 48px
+		line-height: 40px
+		text-align: center
+		font-family: "Courier"
+		margin-top: 20px
+		
+	&:nth-child(1):after
+		content: "1"
+
+	&:nth-child(2):after
+		content: "2"
+
+	&:nth-child(3):after
+		content: "3"
+
+	&:nth-child(4):after
+		content: "4"
+
+	&:nth-child(5):after
+		content: "5"
+
+	&:nth-child(6):after
+		content: "6"

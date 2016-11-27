@@ -1,1 +1,72 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=1024"><meta name="apple-mobile-web-app-capable" content="yes"><title>Flexbox Presentation by Ari Sunarya</title><meta name="description" content="Flexbox presentation"><meta name="author" content="Ari Sunarya"><link rel="stylesheet" href="css/normalize.css"><link rel="stylesheet" href="css/main.css"></head><body class="impress-not-supported"><div class="fallback-message"><p>Your browser <b>doesn't support the features required </b>by impress.js, so you are presented with a simplified version of this presentation. </p><p> For the best experience please use the latest  <b>Chrome, </b><b>Safari </b>or <b>Firefox browser. </b></p></div><div id="impress"><div class="step" id="wellcome" data-x="0" data-y="-1500"><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et sequi reiciendis tenetur, ex mollitia dolorum harum. Dolores in possimus natus, aperiam et adipisci excepturi. Ipsam, tenetur voluptate qui. Unde, delectus?</p></div><div class="step" id="introduction" data-x="1000" data-y="-1500" data-scale="4" data-rotate="45" data-rotate-x="20" data-rotate-y="12" data-z="1000"><q>Don’t you think that presentations given <strong>in modern browsers</strong> shouldn’t <strong>copy the limits</strong> of ‘classic’ slide decks?</q></div></div><script src="js/impress.js"></script><script src="js/main.js"></script></body></html>
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=1024"><meta name="apple-mobile-web-app-capable" content="yes"><title>Flexbox Presentation by Ari Sunarya</title><meta name="description" content="Flexbox presentation"><meta name="author" content="Ari Sunarya"><link rel="stylesheet" href="css/normalize.css"><link rel="stylesheet" href="css/main.css"></head><body class="impress-not-supported"><div class="fallback-message"><p>Your browser <b>doesn't support the features required </b>by impress.js, so you are presented with a simplified version of this presentation. </p><p> For the best experience please use the latest  <b>Chrome, </b><b>Safari </b>or <b>Firefox browser. </b></p></div><div id="impress"><div class="step" data-y="-2000" data-x="-1000"><div>FLEXBOX</div><div><small>by</small><strong>Ari Sunarya</strong></div><div><a href="https://arisunarya.github.io/flexbox-presentation/">https://arisunarya.github.io/flexbox-presentation/</a></div></div><div class="step" data-y="-2000" data-x="0"><center> WHAT IS FLEXBOX? <br>HOW TO USE FLEXBOX?</center></div><div class="step boxed" id="initialize" data-y="-2000" data-x="1000"><div class="header"><div class="header-property">initialize display</div><div class="header-values"><div class="header-value">flex</div><div class="header-value">inline-flex</div></div></div><div class="display"><pre class="display-syntax"><code>.container {
+  display: flex;
+  flex-direction: row; < default
+}</code></pre><div class="display-flexbox"><div class="flex-container"><div class="flex-item"></div><div class="flex-item"></div></div></div></div></div><div class="step boxed" id="flex-direction" data-y="-1200" data-x="1000"><div class="header"><div class="header-property">flex-direction</div><div class="header-values"><div class="header-value">row</div><div class="header-value">row-reverse</div><div class="header-value">column</div><div class="header-value">column-reverse</div></div></div><div class="display"><pre class="display-syntax"><code>.container {
+  display: flex;
+  flex-direction: <b>column</b>;
+}</code></pre><div class="display-flexbox"><div class="flex-container" style="flex-direction: column"><div class="flex-item"></div><div class="flex-item"></div><div class="flex-item"></div></div></div></div></div><div class="step" id="flex-direction-column-reverse" data-y="-600" data-x="1000" data-rotate-x="-40"><div class="display"><div class="display-flexbox"><div class="flex-container" style="flex-direction: column-reverse"><div class="flex-item"></div><div class="flex-item"></div><div class="flex-item"></div></div></div><pre class="display-syntax"><code>.container {
+  display: flex;
+  flex-direction: <b>column-reverse</b>;
+}</code></pre></div></div><div class="step boxed" id="flex-wrap" data-y="600" data-x="900" data-rotate="90" data-scale="2"><div class="header"><div class="header-property">flex-wrap</div><div class="header-values"><div class="header-value">nowrap</div><div class="header-value">wrap</div><div class="header-value">wrap-reverse</div></div></div><div class="display"><pre class="display-syntax"><code>.container {
+  display: flex;
+  flex-direction: row < default
+  flex-wrap: nowrap < default
+}</code></pre><div class="display-flexbox"><div class="flex-container"><div class="flex-item"></div><div class="flex-item"></div><div class="flex-item"></div><div class="flex-item"></div><div class="flex-item"></div><div class="flex-item"></div></div></div></div></div><div class="step" id="flex-wrap-wrap" data-y="600" data-x="-200" data-rotate="90" data-scale="2"><div class="display"><pre class="display-syntax"><code>.container {
+  display: flex;
+  flex-direction: row < default
+  flex-wrap: <b>wrap</b>;
+}</code></pre><div class="display-flexbox"><div class="flex-container" style="flex-wrap: wrap"><div class="flex-item"></div><div class="flex-item"></div><div class="flex-item"></div><div class="flex-item"></div><div class="flex-item"></div><div class="flex-item"></div></div></div></div></div><div class="step" id="flex-wrap-reverse" data-y="600" data-x="-1150" data-rotate="90" data-scale="2"><div class="display"><pre class="display-syntax"><code>.container {
+  display: flex;
+  flex-direction: row < default
+  flex-wrap: <b>wrap-reverse</b>;
+}</code></pre><div class="display-flexbox"><div class="flex-container" style="flex-wrap: wrap-reverse"><div class="flex-item"></div><div class="flex-item"></div><div class="flex-item"></div><div class="flex-item"></div><div class="flex-item"></div><div class="flex-item"></div></div></div></div></div><div class="step boxed" id="flex-flow" data-y="-1200" data-x="-600" data-rotate="180" data-scale="2.5"><div class="header"><div class="header-property">flex-flow</div><div class="header-values"><div class="header-value">[flex-direction]</div><div class="header-value">[flex-wrap]</div></div></div><div class="display"><pre class="display-syntax"><code>.container {
+  display: flex;
+  flex-flow: <b>column-reverse wrap-reverse</b>;
+}</code></pre><div class="display-flexbox"><div class="flex-container" style="flex-flow: column-reverse wrap-reverse"><div class="flex-item"></div><div class="flex-item"></div><div class="flex-item"></div><div class="flex-item"></div><div class="flex-item"></div><div class="flex-item"></div></div></div></div></div><div class="step boxed" id="justify-content" data-y="-2370" data-x="-1700" data-rotate-x="-50"><div class="header"><div class="header-property">justify-content</div><div class="header-values"><div class="header-value">flex-start</div><div class="header-value">flex-end</div><div class="header-value">center</div><div class="header-value">space-around</div><div class="header-value">space-between</div></div></div><div class="display"><pre class="display-syntax"><code>.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start < default
+}</code></pre><div class="display-flexbox"><div class="flex-container" style="justify-content: flex-start; flex-wrap:wrap"><div class="flex-item"></div><div class="flex-item"></div><div class="flex-item"></div><div class="flex-item"></div><div class="flex-item"></div><div class="flex-item"></div></div></div></div></div><div class="step boxed" id="justify-content-center" data-y="-2370" data-x="-800" data-rotate-x="-50"><div style="height:152px"></div><div class="display"><pre class="display-syntax"><code>.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: <b>center</b>;
+}</code></pre><div class="display-flexbox"><div class="flex-container" style="justify-content: center; flex-wrap:wrap"><div class="flex-item"></div><div class="flex-item"></div><div class="flex-item"></div><div class="flex-item"></div><div class="flex-item"></div><div class="flex-item"></div></div></div></div></div><div class="step boxed" id="justify-content-end" data-y="-2370" data-x="100" data-rotate-x="-50"><div style="height:152px"></div><div class="display"><pre class="display-syntax"><code>.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: <b>flex-end</b>;
+}</code></pre><div class="display-flexbox"><div class="flex-container" style="justify-content: flex-end; flex-wrap:wrap"><div class="flex-item"></div><div class="flex-item"></div><div class="flex-item"></div><div class="flex-item"></div><div class="flex-item"></div><div class="flex-item"></div></div></div></div></div><div class="step boxed" id="justify-content-around" data-y="-2800" data-x="100" data-z="100"><div style="height:152px"></div><div class="display"><pre class="display-syntax"><code>.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: <b>space-around</b>;
+}</code></pre><div class="display-flexbox"><div class="flex-container" style="justify-content: space-around; flex-wrap:wrap"><div class="flex-item"></div><div class="flex-item"></div><div class="flex-item"></div><div class="flex-item"></div><div class="flex-item"></div><div class="flex-item"></div></div></div></div></div><div class="step boxed" id="justify-content-between" data-y="-2800" data-x="-800" data-z="100"><div style="height:152px"></div><div class="display"><pre class="display-syntax"><code>.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: <b>space-between</b>;
+}</code></pre><div class="display-flexbox"><div class="flex-container" style="justify-content: space-between; flex-wrap:wrap"><div class="flex-item"></div><div class="flex-item"></div><div class="flex-item"></div><div class="flex-item"></div><div class="flex-item"></div><div class="flex-item"></div></div></div></div></div><div class="step boxed" id="align-items" data-y="-1050" data-x="-2300" data-scale="2" data-rotate="90"><div class="header"><div class="header-property">align-items</div><div class="header-values"><div class="header-value">flex-start</div><div class="header-value">flex-end</div><div class="header-value">center</div><div class="header-value">baseline</div><div class="header-value">stretch</div></div></div><div class="display"><pre class="display-syntax"><code>.container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: <b>flex-start</b>;
+  justify-content: center;
+}</code></pre><div class="display-flexbox"><div class="flex-container" style="align-items: flex-start;justify-content: center; flex-wrap: wrap"><div class="flex-item" style="height:110px"></div><div class="flex-item" style="height:70px"></div><div class="flex-item" style="height:90px"></div></div></div></div></div><div class="step" id="align-items-center" data-y="300" data-x="-1900" data-rotate="90"><div class="display"><pre class="display-syntax"><code>.container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: <b>center</b>;
+  justify-content: center;
+}</code></pre><div class="display-flexbox"><div class="flex-container" style="align-items: center;justify-content: center; flex-wrap: wrap"><div class="flex-item" style="height:110px"></div><div class="flex-item" style="height:70px"></div><div class="flex-item" style="height:90px"></div></div></div></div></div><div class="step" id="align-items-end" data-y="300" data-x="-2400" data-rotate="90"><div class="display"><pre class="display-syntax"><code>.container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: <b>flex-end</b>;
+  justify-content: center;
+}</code></pre><div class="display-flexbox"><div class="flex-container" style="align-items: flex-end;justify-content: center; flex-wrap: wrap"><div class="flex-item" style="height:110px"></div><div class="flex-item" style="height:70px"></div><div class="flex-item" style="height:90px"></div></div></div></div></div><div class="step boxed" id="align-content" data-y="1100" data-x="-2200" data-scale="1"><div class="header"><div class="header-property">align-content</div><div class="header-values"><div class="header-value">flex-start</div><div class="header-value">flex-end</div><div class="header-value">center</div><div class="header-value">space-around</div><div class="header-value">space-between</div><div class="header-value">stretch</div></div></div><div class="display"><pre class="display-syntax"><code>.container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  align-content: <b>flex-end</b>;
+  justify-content: center;
+}</code></pre><div class="display-flexbox"><div class="flex-container" style="align-items: center;align-content:flex-end;justify-content: center; flex-wrap: wrap"><div class="flex-item" style="height:65px"></div><div class="flex-item" style="height:100px"></div><div class="flex-item" style="height:77px"></div><div class="flex-item" style="height:60px"></div><div class="flex-item" style="height:70px"></div><div class="flex-item" style="height:60px"></div></div></div></div></div><div class="step" data-y="1650" data-x="-2200" data-scale="1"><div class="display"><div class="display-flexbox"><div class="flex-container" style="align-items: flex-end;align-content: space-between; justify-content: center; flex-wrap: wrap"><div class="flex-item" style="height:65px"></div><div class="flex-item" style="height:100px"></div><div class="flex-item" style="height:77px"></div><div class="flex-item" style="height:60px"></div><div class="flex-item" style="height:70px"></div><div class="flex-item" style="height:60px"></div></div></div><pre class="display-syntax"><code>.container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  align-content: <b>flex-end</b>;
+  justify-content: center;
+}</code></pre></div></div></div><script src="js/impress.js"></script><script src="js/main.js"></script></body></html>

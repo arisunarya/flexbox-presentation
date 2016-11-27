@@ -1,3 +1,9 @@
+mixin header(property, values)
+	.header
+			.header-property= property
+			.header-values
+				each value in values
+					.header-value= value
 doctype
 html(lang="en")
 	head
@@ -27,28 +33,404 @@ html(lang="en")
 		
 		#impress
 			.step(
-				id="wellcome"
-				data-x='0'
-				data-y='-1500'
+				data-y='-2000'
+				data-x='-1000'
 				)
-				p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et sequi reiciendis tenetur, ex mollitia dolorum harum. Dolores in possimus natus, aperiam et adipisci excepturi. Ipsam, tenetur voluptate qui. Unde, delectus?
+				div FLEXBOX
+				div
+					small by
+					strong Ari Sunarya
+				div
+					a(href="https://arisunarya.github.io/flexbox-presentation/") https://arisunarya.github.io/flexbox-presentation/
+			.step(
+				data-y='-2000'
+				data-x='0'
+				)
+				center 
+					| WHAT IS FLEXBOX? 
+					br
+					| HOW TO USE FLEXBOX?
+				
+			.step.boxed(
+				id="initialize"
+				data-y='-2000'
+				data-x='1000'
+				)
+				+header("initialize display", ["flex", "inline-flex"])
+				.display
+					pre.display-syntax
+						code
+							| .container {
+							|   display: flex;
+							|   flex-direction: row; < default
+							| }
+					.display-flexbox
+						.flex-container
+							.flex-item
+							.flex-item
+			
+			.step.boxed(
+				id="flex-direction"
+				data-y='-1200'
+				data-x='1000'
+				)
+				+header("flex-direction", ["row", "row-reverse", "column", "column-reverse"])
+				.display
+					pre.display-syntax
+						code
+							| .container {
+							|   display: flex;
+							|   flex-direction: <b>column</b>;
+							| }
+					.display-flexbox
+						.flex-container(style="flex-direction: column")
+							.flex-item
+							.flex-item
+							.flex-item
 			
 			.step(
-				id="introduction"
+				id="flex-direction-column-reverse"
+				data-y='-600'
 				data-x='1000'
-				data-y='-1500'
-				data-scale="4"
-				data-rotate="45"
-				data-rotate-x="20"
-				data-rotate-y="12"
-				data-z="1000"
+				data-rotate-x="-40"
 				)
-				q
-					| Don’t you think that presentations given 
-					strong in modern browsers
-					|  shouldn’t 
-					strong copy the limits
-					|  of ‘classic’ slide decks?
+				.display
+					.display-flexbox
+						.flex-container(style="flex-direction: column-reverse")
+							.flex-item
+							.flex-item
+							.flex-item
+					pre.display-syntax
+						code
+							| .container {
+							|   display: flex;
+							|   flex-direction: <b>column-reverse</b>;
+							| }
+			.step.boxed(
+				id="flex-wrap"
+				data-y='600'
+				data-x='900'
+				data-rotate="90"
+				data-scale="2"
+				)
+				+header("flex-wrap", ["nowrap", "wrap", "wrap-reverse"])
+				.display
+					pre.display-syntax
+						code
+							| .container {
+							|   display: flex;
+							|   flex-direction: row < default
+							|   flex-wrap: nowrap < default
+							| }
+					.display-flexbox
+						.flex-container
+							.flex-item
+							.flex-item
+							.flex-item
+							.flex-item
+							.flex-item
+							.flex-item
+			
+			.step(
+				id="flex-wrap-wrap"
+				data-y='600'
+				data-x='-200'
+				data-rotate="90"
+				data-scale="2"
+				)
+				.display
+					pre.display-syntax
+						code
+							| .container {
+							|   display: flex;
+							|   flex-direction: row < default
+							|   flex-wrap: <b>wrap</b>;
+							| }
+					.display-flexbox
+						.flex-container(style="flex-wrap: wrap")
+							.flex-item
+							.flex-item
+							.flex-item
+							.flex-item
+							.flex-item
+							.flex-item
+			.step(
+				id="flex-wrap-reverse"
+				data-y='600'
+				data-x='-1150'
+				data-rotate="90"
+				data-scale="2"
+				)
+				.display
+					pre.display-syntax
+						code
+							| .container {
+							|   display: flex;
+							|   flex-direction: row < default
+							|   flex-wrap: <b>wrap-reverse</b>;
+							| }
+					.display-flexbox
+						.flex-container(style="flex-wrap: wrap-reverse")
+							.flex-item
+							.flex-item
+							.flex-item
+							.flex-item
+							.flex-item
+							.flex-item
+			.step.boxed(
+				id="flex-flow"
+				data-y='-1200'
+				data-x='-600'
+				data-rotate="180"
+				data-scale="2.5"
+				)
+				+header("flex-flow", ["[flex-direction]", "[flex-wrap]"])
+				.display
+					pre.display-syntax
+						code
+							| .container {
+							|   display: flex;
+							|   flex-flow: <b>column-reverse wrap-reverse</b>;
+							| }
+					.display-flexbox
+						.flex-container(style="flex-flow: column-reverse wrap-reverse")
+							.flex-item
+							.flex-item
+							.flex-item
+							.flex-item
+							.flex-item
+							.flex-item
+
+			.step.boxed(
+				id="justify-content"
+				data-y='-2370'
+				data-x='-1700'
+				data-rotate-x="-50"
+				)
+				+header("justify-content", ["flex-start", "flex-end", "center", "space-around", "space-between"])
+				.display
+					pre.display-syntax
+						code
+							| .container {
+							|   display: flex;
+							|   flex-wrap: wrap;
+							|   justify-content: flex-start < default
+							| }
+					.display-flexbox
+						.flex-container(style="justify-content: flex-start; flex-wrap:wrap")
+							.flex-item
+							.flex-item
+							.flex-item
+							.flex-item
+							.flex-item
+							.flex-item
+
+			.step.boxed(
+				id="justify-content-center"
+				data-y='-2370'
+				data-x='-800'
+				data-rotate-x="-50"
+				)
+				div(style="height:152px")
+				.display
+					pre.display-syntax
+						code
+							| .container {
+							|   display: flex;
+							|   flex-wrap: wrap;
+							|   justify-content: <b>center</b>;
+							| }
+					.display-flexbox
+						.flex-container(style="justify-content: center; flex-wrap:wrap")
+							.flex-item
+							.flex-item
+							.flex-item
+							.flex-item
+							.flex-item
+							.flex-item
+
+			.step.boxed(
+				id="justify-content-end"
+				data-y='-2370'
+				data-x='100'
+				data-rotate-x="-50"
+				)
+				div(style="height:152px")
+				.display
+					pre.display-syntax
+						code
+							| .container {
+							|   display: flex;
+							|   flex-wrap: wrap;
+							|   justify-content: <b>flex-end</b>;
+							| }
+					.display-flexbox
+						.flex-container(style="justify-content: flex-end; flex-wrap:wrap")
+							.flex-item
+							.flex-item
+							.flex-item
+							.flex-item
+							.flex-item
+							.flex-item
+
+			.step.boxed(
+				id="justify-content-around"
+				data-y='-2800'
+				data-x='100'
+				data-z="100"
+				)
+				div(style="height:152px")
+				.display
+					pre.display-syntax
+						code
+							| .container {
+							|   display: flex;
+							|   flex-wrap: wrap;
+							|   justify-content: <b>space-around</b>;
+							| }
+					.display-flexbox
+						.flex-container(style="justify-content: space-around; flex-wrap:wrap")
+							.flex-item
+							.flex-item
+							.flex-item
+							.flex-item
+							.flex-item
+							.flex-item
+
+			.step.boxed(
+				id="justify-content-between"
+				data-y='-2800'
+				data-x='-800'
+				data-z="100"
+				)
+				div(style="height:152px")
+				.display
+					pre.display-syntax
+						code
+							| .container {
+							|   display: flex;
+							|   flex-wrap: wrap;
+							|   justify-content: <b>space-between</b>;
+							| }
+					.display-flexbox
+						.flex-container(style="justify-content: space-between; flex-wrap:wrap")
+							.flex-item
+							.flex-item
+							.flex-item
+							.flex-item
+							.flex-item
+							.flex-item
+			
+			.step.boxed(
+				id="align-items"
+				data-y='-1050'
+				data-x='-2300'
+				data-scale="2"
+				data-rotate="90"
+				)
+				+header("align-items", ["flex-start", "flex-end", "center", "baseline", "stretch"])
+				.display
+					pre.display-syntax
+						code
+							| .container {
+							|   display: flex;
+							|   flex-wrap: wrap;
+							|   align-items: <b>flex-start</b>;
+							|   justify-content: center;
+							| }
+					.display-flexbox
+						.flex-container(style="align-items: flex-start;justify-content: center; flex-wrap: wrap")
+							.flex-item(style="height:110px")
+							.flex-item(style="height:70px")
+							.flex-item(style="height:90px")
+			.step(
+				id="align-items-center"
+				data-y='300'
+				data-x='-1900'
+				data-rotate="90"
+				)
+				.display
+					pre.display-syntax
+						code
+							| .container {
+							|   display: flex;
+							|   flex-wrap: wrap;
+							|   align-items: <b>center</b>;
+							|   justify-content: center;
+							| }
+					.display-flexbox
+						.flex-container(style="align-items: center;justify-content: center; flex-wrap: wrap")
+							.flex-item(style="height:110px")
+							.flex-item(style="height:70px")
+							.flex-item(style="height:90px")
+			.step(
+				id="align-items-end"
+				data-y='300'
+				data-x='-2400'
+				data-rotate="90"
+				)
+				.display
+					pre.display-syntax
+						code
+							| .container {
+							|   display: flex;
+							|   flex-wrap: wrap;
+							|   align-items: <b>flex-end</b>;
+							|   justify-content: center;
+							| }
+					.display-flexbox
+						.flex-container(style="align-items: flex-end;justify-content: center; flex-wrap: wrap")
+							.flex-item(style="height:110px")
+							.flex-item(style="height:70px")
+							.flex-item(style="height:90px")
+			.step.boxed(
+				id="align-content"
+				data-y='1100'
+				data-x='-2200'
+				data-scale="1"
+				)
+				+header("align-content", ["flex-start", "flex-end", "center", "space-around", "space-between", "stretch"])
+				.display
+					pre.display-syntax
+						code
+							| .container {
+							|   display: flex;
+							|   flex-wrap: wrap;
+							|   align-items: center;
+							|   align-content: <b>flex-end</b>;
+							|   justify-content: center;
+							| }
+					.display-flexbox
+						.flex-container(style="align-items: center;align-content:flex-end;justify-content: center; flex-wrap: wrap")
+							.flex-item(style="height:65px")
+							.flex-item(style="height:100px")
+							.flex-item(style="height:77px")
+							.flex-item(style="height:60px")
+							.flex-item(style="height:70px")
+							.flex-item(style="height:60px")
+			.step(
+				data-y='1650'
+				data-x='-2200'
+				data-scale="1"
+				)
+				.display
+					.display-flexbox
+						.flex-container(style="align-items: flex-end;align-content: space-between; justify-content: center; flex-wrap: wrap")
+							.flex-item(style="height:65px")
+							.flex-item(style="height:100px")
+							.flex-item(style="height:77px")
+							.flex-item(style="height:60px")
+							.flex-item(style="height:70px")
+							.flex-item(style="height:60px")
+					pre.display-syntax
+						code
+							| .container {
+							|   display: flex;
+							|   flex-wrap: wrap;
+							|   align-items: center;
+							|   align-content: <b>flex-end</b>;
+							|   justify-content: center;
+							| }
 					
 		script(src="js/impress.js")
 		script(src="js/main.js")

@@ -1,9 +1,0 @@
-{
-	"version": 3,
-	"file": "main.scss",
-	"sources": [
-		"../css/main.css"
-	],
-	"mappings": "AACA,oCAAoC",
-	"names": []
-}
