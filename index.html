@@ -1,6 +1,6 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=1024"><meta name="apple-mobile-web-app-capable" content="yes"><title>Flexbox Presentation by Ari Sunarya</title><meta name="description" content="Flexbox presentation"><meta name="author" content="Ari Sunarya"><link rel="stylesheet" href="css/normalize.css"><link rel="stylesheet" href="css/main.css"></head><body class="impress-not-supported"><div class="fallback-message"><p>Your browser <b>doesn't support the features required </b>by impress.js, so you are presented with a simplified version of this presentation. </p><p> For the best experience please use the latest  <b>Chrome, </b><b>Safari </b>or <b>Firefox browser. </b></p></div><div id="impress"><div class="step" data-y="-2000" data-x="-1000"><div>FLEXBOX</div><div><small>by</small><strong>Ari Sunarya</strong></div><div><a href="https://arisunarya.github.io/flexbox-presentation/">https://arisunarya.github.io/flexbox-presentation/</a></div></div><div class="step" data-y="-2000" data-x="0"><center> WHAT IS FLEXBOX? <br>HOW TO USE FLEXBOX?</center></div><div class="step boxed" id="initialize" data-y="-2000" data-x="1000"><div class="header"><div class="header-property">initialize display</div><div class="header-values"><div class="header-value">flex</div><div class="header-value">inline-flex</div></div></div><div class="display"><pre class="display-syntax"><code>.container {
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=1024"><meta name="apple-mobile-web-app-capable" content="yes"><title>Flexbox Presentation by Ari Sunarya</title><meta name="description" content="Flexbox presentation"><meta name="author" content="Ari Sunarya"><link rel="stylesheet" href="css/normalize.css"><link rel="stylesheet" href="css/main.css"></head><body class="impress-not-supported"><div class="fallback-message"><p>Your browser <b>doesn't support the features required </b>by impress.js, so you are presented with a simplified version of this presentation. </p><p> For the best experience please use the latest  <b>Chrome, </b><b>Safari </b>or <b>Firefox browser. </b></p></div><div id="impress"><div class="step" data-y="-2000" data-x="-1000"><h1>FLEXBOX</h1><div><small>by</small>: <strong>Ari Sunarya</strong></div><div><a href="https://arisunarya.github.io/flexbox-presentation/">https://arisunarya.github.io/flexbox-presentation/</a></div></div><div class="step" data-y="-2000" data-x="0"><h2><center>What is flexbox? how to use it?</center></h2></div><div class="step boxed" id="initialize" data-y="-2000" data-x="1000"><div class="header"><div class="header-property">initialize display</div><div class="header-values"><div class="header-value">flex</div><div class="header-value">inline-flex</div></div></div><div class="display"><pre class="display-syntax"><code>.container {
   display: flex;
-  flex-direction: row; < default
+  flex-direction: row < default
 }</code></pre><div class="display-flexbox"><div class="flex-container"><div class="flex-item"></div><div class="flex-item"></div></div></div></div></div><div class="step boxed" id="flex-direction" data-y="-1200" data-x="1000"><div class="header"><div class="header-property">flex-direction</div><div class="header-values"><div class="header-value">row</div><div class="header-value">row-reverse</div><div class="header-value">column</div><div class="header-value">column-reverse</div></div></div><div class="display"><pre class="display-syntax"><code>.container {
   display: flex;
   flex-direction: <b>column</b>;
@@ -57,16 +57,97 @@
   flex-wrap: wrap;
   align-items: <b>flex-end</b>;
   justify-content: center;
-}</code></pre><div class="display-flexbox"><div class="flex-container" style="align-items: flex-end;justify-content: center; flex-wrap: wrap"><div class="flex-item" style="height:110px"></div><div class="flex-item" style="height:70px"></div><div class="flex-item" style="height:90px"></div></div></div></div></div><div class="step boxed" id="align-content" data-y="1100" data-x="-2200" data-scale="1"><div class="header"><div class="header-property">align-content</div><div class="header-values"><div class="header-value">flex-start</div><div class="header-value">flex-end</div><div class="header-value">center</div><div class="header-value">space-around</div><div class="header-value">space-between</div><div class="header-value">stretch</div></div></div><div class="display"><pre class="display-syntax"><code>.container {
+}</code></pre><div class="display-flexbox"><div class="flex-container" style="align-items: flex-end;justify-content: center; flex-wrap: wrap"><div class="flex-item" style="height:110px"></div><div class="flex-item" style="height:70px"></div><div class="flex-item" style="height:90px"></div></div></div></div></div><div class="step boxed" id="align-content" data-y="1100" data-x="-2200"><div class="header"><div class="header-property">align-content</div><div class="header-values"><div class="header-value">flex-start</div><div class="header-value">flex-end</div><div class="header-value">center</div><div class="header-value">space-around</div><div class="header-value">space-between</div><div class="header-value">stretch</div></div></div><div class="display"><pre class="display-syntax"><code>.container {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   align-content: <b>flex-end</b>;
   justify-content: center;
-}</code></pre><div class="display-flexbox"><div class="flex-container" style="align-items: center;align-content:flex-end;justify-content: center; flex-wrap: wrap"><div class="flex-item" style="height:65px"></div><div class="flex-item" style="height:100px"></div><div class="flex-item" style="height:77px"></div><div class="flex-item" style="height:60px"></div><div class="flex-item" style="height:70px"></div><div class="flex-item" style="height:60px"></div></div></div></div></div><div class="step" data-y="1650" data-x="-2200" data-scale="1"><div class="display"><div class="display-flexbox"><div class="flex-container" style="align-items: flex-end;align-content: space-between; justify-content: center; flex-wrap: wrap"><div class="flex-item" style="height:65px"></div><div class="flex-item" style="height:100px"></div><div class="flex-item" style="height:77px"></div><div class="flex-item" style="height:60px"></div><div class="flex-item" style="height:70px"></div><div class="flex-item" style="height:60px"></div></div></div><pre class="display-syntax"><code>.container {
+}</code></pre><div class="display-flexbox"><div class="flex-container" style="align-items: center;align-content:flex-end;justify-content: center; flex-wrap: wrap"><div class="flex-item" style="height:65px"></div><div class="flex-item" style="height:100px"></div><div class="flex-item" style="height:77px"></div><div class="flex-item" style="height:60px"></div><div class="flex-item" style="height:70px"></div><div class="flex-item" style="height:60px"></div></div></div></div></div><div class="step" data-y="1650" data-x="-2200"><div class="display"><div class="display-flexbox"><div class="flex-container" style="align-items: flex-end;align-content: space-between; justify-content: center; flex-wrap: wrap"><div class="flex-item" style="height:65px"></div><div class="flex-item" style="height:100px"></div><div class="flex-item" style="height:77px"></div><div class="flex-item" style="height:60px"></div><div class="flex-item" style="height:70px"></div><div class="flex-item" style="height:60px"></div></div></div><pre class="display-syntax"><code>.container {
   display: flex;
   flex-wrap: wrap;
-  align-items: center;
-  align-content: <b>flex-end</b>;
+  align-items: flex-end;
+  align-content: <b>space-between</b>;
   justify-content: center;
-}</code></pre></div></div></div><script src="js/impress.js"></script><script src="js/main.js"></script></body></html>
+}</code></pre></div></div><div class="step" data-y="2000" data-x="-50" data-rotate="90"><div class="header"><div class="header-property">flex-basis</div><div class="header-values"><div class="header-value">[absolute unit]</div><div class="header-value">auto</div></div></div><div class="display"><pre class="display-syntax"><code>.container {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+ 
+.item-1{
+  flex-basis: 30%;
+}
+ 
+.item-2{
+  flex-basis: 70%;
+}</code></pre><div class="display-flexbox"><div class="flex-container" style="flex-wrap: wrap"><div class="flex-item" style="flex-basis: calc(30% - 56px)"></div><div class="flex-item" style="flex-basis: calc(70% - 56px)"></div></div></div></div></div><div class="step" data-y="2000" data-x="-600" data-rotate="90"><div class="display"><pre class="display-syntax"><code>.container {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+ 
+.item-1{
+  flex-basis: 30%;
+}
+ 
+.item-2{
+  flex-basis: 70%;
+}</code></pre><div class="display-flexbox"><div class="flex-container" style="flex-wrap: wrap; flex-direction:column"><div class="flex-item" style="flex-basis: calc(30% - 56px)"></div><div class="flex-item" style="flex-basis: calc(70% - 56px)"></div></div></div></div></div><div class="step" data-y="1850" data-x="-1300" data-rotate="180"><div class="header"><div class="header-property">flex-shrink</div><div class="header-values"><div class="header-value">number</div></div></div><div class="display"><pre class="display-syntax"><code>.container {
+  display: flex;
+  flex-direction: row;
+  width: 400px;
+}
+ 
+.item-1{
+  flex-basis: 200px;
+}
+ 
+.item-2{
+  flex-basis: 400px;
+  flex-shrink: 1;
+}</code></pre><div class="display-flexbox"><div class="flex-container"><div class="flex-item" style="flex-basis: calc(200px - 56px)"></div><div class="flex-item" style="flex-basis: calc(400px - 56px); flex-shrink: 1"></div></div></div></div></div><div class="step" data-y="2200" data-x="650" data-rotate="180"><div class="header"><div class="header-property">flex-grow</div><div class="header-values"><div class="header-value">number</div></div></div><div class="display"><pre class="display-syntax"><code>.container {
+  display: flex;
+  flex-direction: column;
+  width: 400px;
+}
+ 
+.item-1{
+  flex-basis: 120px;
+}
+ 
+.item-2{
+  flex-grow: 1;
+}</code></pre><div class="display-flexbox"><div class="flex-container" style="flex-direction: column"><div class="flex-item" style="flex-basis: calc(120px - 56px)"></div><div class="flex-item" style="flex-grow: 1"></div></div></div></div></div><div class="step" id="flex" data-y="-300" data-x="-300" data-rotate="35" data-scale="5"><div class="header"><div class="header-property">flex</div><div class="header-values"><div class="header-value">[flex-grow]</div><div class="header-value">[flex-shrink]</div><div class="header-value">[flex-basis]</div></div></div><div class="display"><div class="display-flexbox"><div class="flex-container"><div class="flex-item" style="flex: 1"></div><div class="flex-item" style="flex: 1 1 auto"></div><div class="flex-item" style="flex: 1"></div></div></div><pre class="display-syntax"><code>.container {
+  display: flex;
+  flex-direction: row;
+  width: 400px;
+}
+ 
+.item-1{
+  flex: 1;
+}
+ 
+.item-2{
+  flex: 1 1 auto;
+}
+ 
+.item-3{
+  flex: 1;
+}</code></pre></div></div><div class="step boxed" id="align-self" data-y="-1400" data-x="2075" data-rotate="-90" data-scale="2"><div class="header"><div class="header-property">align-self</div><div class="header-values"><div class="header-value">auto</div><div class="header-value">flex-start</div><div class="header-value">flex-end</div><div class="header-value">center</div><div class="header-value">baseline</div><div class="header-value">stretch</div></div></div><div class="display"><pre class="display-syntax"><code>.container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+ 
+.item-2{
+  align-self: flex-start;
+}</code></pre><div class="display-flexbox"><div class="flex-container" style="justify-content: space-around;align-items: center"><div class="flex-item"></div><div class="flex-item" style="align-self: flex-start"></div><div class="flex-item"></div></div></div></div></div><div class="step boxed" id="order" data-y="600" data-x="2075" data-rotate="-90" data-scale="2"><div class="header"><div class="header-property">order</div><div class="header-values"><div class="header-value">number</div></div></div><div class="display"><pre class="display-syntax"><code>.container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+ 
+.item-2{
+  align-self: flex-start;
+}</code></pre><div class="display-flexbox"><div class="flex-container" style="flex-wrap: wrap"><div class="flex-item"></div><div class="flex-item" style="order: 1"></div><div class="flex-item"></div><div class="flex-item"></div><div class="flex-item"></div><div class="flex-item" style="order:-1"></div><div class="flex-item"></div><div class="flex-item"></div></div></div></div></div></div><script src="js/impress.js"></script><script src="js/main.js"></script></body></html>
